@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TastyBites Restaurant</title>
+  
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1600891963937-c9b6fecc8f7b?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      height: 80vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px #000;
+    }
+    .menu img {
+      border-radius: 10px;
+      height: 200px;
+      object-fit: cover;
+    }
+    footer {
+      background: #222;
+      color: #aaa;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#"> TastyBites 🍴</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Reservation</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+ 
+  <section id="home" class="hero">
+    <div>
+      <h1>Welcome to TastyBites</h1>
+      <p>Delicious meals made with love </p>
+      <a href="#menu" class="btn btn-warning btn-lg mt-3">View Menu</a>
+    </div>
+  </section>
+
+  
+  <section id="menu" class="menu py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Our Special Menu</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="images/OIP 1.webp" class="card-img-top" alt="Pizza">
+            <div class="card-body text-center">
+              <h5 class="card-title">Cheese Pizza</h5>
+              <p class="card-text">Classic cheese pizza topped with mozzarella.</p>
+              <p class="fw-bold text-danger">$12.99</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="images/OIP.webp" class="card-img-top" alt="Pasta">
+            <div class="card-body text-center">
+              <h5 class="card-title">Creamy Pasta</h5>
+              <p class="card-text">Penne pasta with creamy Alfredo sauce.</p>
+              <p class="fw-bold text-danger">$10.50</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Burger">
+            <div class="card-body text-center">
+              <h5 class="card-title">Grilled Burger</h5>
+              <p class="card-text">Juicy beef burger with lettuce and tomato.</p>
+              <p class="fw-bold text-danger">$9.99</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="contact" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Book a Table</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <form id="reservationForm">
+            <div class="mb-3">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control" placeholder="Enter your name" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Date</label>
+              <input type="date" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Time</label>
+              <input type="time" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Number of People</label>
+              <input type="number" class="form-control" placeholder="2" min="1" required>
+            </div>
+            <div class="text-center">
+              <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                Confirm Booking
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title" id="bookingModalLabel">Booking Confirmed!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center">
+          <p> Thank you for booking with <strong>TastyBites</strong>!</p>
+          <p>We look forward to serving you soon 🍽️</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+  <footer>
+    <p>© 2025 TastyBites Restaurant | Designed with  using Bootstrap</p>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
